@@ -1,0 +1,198 @@
+
+
+a {
+	color: $linkColor;
+	text-decoration: none;
+}
+
+/*
+	Bar over top of link animation
+.barTopNav {
+	@include linkStyle;
+	
+	&:after {
+		@include outsideLinks;
+	}
+	&:hover:after {
+	  @include outsideHover;
+	}
+}
+*/
+
+@keyframes fadeInOut {
+    0%  { opacity: 0; }
+	20%  { opacity: 0; }
+    25% { opacity: 1; }
+    90%  { opacity: 1; }
+    100% { opacity: 0; }
+}
+
+/* Firefox < 16 */
+@-moz-keyframes fadeInOut {
+    0%  { opacity: 0; }
+	20%  { opacity: 0; }
+    25% { opacity: 1; }
+    90%  { opacity: 1; }
+    100% { opacity: 0; }
+}
+
+/* Safari, Chrome and Opera > 12.1 */
+@-webkit-keyframes fadeInOut {
+    0%  { opacity: 0; }
+	20%  { opacity: 0; }
+    25% { opacity: 1; }
+    90%  { opacity: 1; }
+    100% { opacity: 0; }
+}
+
+/* Internet Explorer */
+@-ms-keyframes fadeInOut {
+    0%  { opacity: 0; }
+	20%  { opacity: 0; }
+    25% { opacity: 1; }
+    90%  { opacity: 1; }
+    100% { opacity: 0; }
+}
+
+/* Opera < 12.1 */
+@-o-keyframes fadeInOut {
+    0%  { opacity: 0; }
+	20%  { opacity: 0; }
+    25% { opacity: 1; }
+    90%  { opacity: 1; }
+    100% { opacity: 0; }
+}
+
+@-webkit-keyframes fadeInRight {
+           0% {
+              opacity: 0;
+              -webkit-transform: translateX(20px);
+           }
+           100% {
+              opacity: 1;
+              -webkit-transform: translateX(0);
+           }
+        }
+        
+        @keyframes fadeInRight {
+           0% {
+              opacity: 0;
+              transform: translateX(20px);
+           }
+           100% {
+              opacity: 1;
+              transform: translateX(0);
+           }
+        }
+
+@-webkit-keyframes textDis {
+    0%   { left:0px; bottom:0px; }
+    100% { left:4px; bottom:4px; }
+}
+
+@keyframes textDis {
+    0%   { left:0px; bottom:0px; }
+    100% { left:4px; bottom:4px; }
+}
+
+@-webkit-keyframes txtSha {
+    0%   { bottom:0px; text-shadow:0px 12px #000; }
+    100% { bottom:8px; text-shadow:0px 12px #000; } 
+}
+
+
+@keyframes txtSha {
+    0%   { bottom:0px; text-shadow:0px 12px #000; }
+    100% { bottom:8px; text-shadow:0px 12px #000; }
+}
+
+@-webkit-keyframes txtUp {
+    0%   { bottom:0px; }
+    100% { bottom:12px; } 
+}
+
+
+@keyframes txtUp {
+    0%   { bottom:0px; }
+    100% { bottom:12px; }
+}
+
+@-webkit-keyframes txtDown {
+    0%   { top:0px; }
+    100% { top:12px; } 
+}
+
+
+@keyframes txtDown {
+    0%   { top:0px; }
+    100% { top:12px; }
+}
+
+@-webkit-keyframes pulse {
+    0%   { word-spacing: 0px; }
+	50%  { word-spacing: 5px; } 
+    100% { word-spacing: 10px; } 
+}
+
+
+@keyframes pulse {
+    0%   { transform: scale(1.0); }
+	50%  { transform: scale(1.1); } 
+    100% { transform: scale(1.0); } 
+}
+
+.pulseTxt {
+	@include linkNav;
+	
+	&:hover {
+	    -webkit-animation: pulse .25s ease-in-out forwards;
+	    animation: pulse .25s ease-in-out forwards;
+	}
+}
+
+.displaceText {
+	@include linkNav;
+	
+	
+}
+
+.disShadow {
+	
+	@include linkNav;
+	
+	&:hover {
+	    -webkit-animation: txtUp .35s ease-in-out forwards;
+	    animation: txtUp .35s ease-in-out forwards;
+		text-shadow:0px 12px #000; 
+		-webkit-transition: 1s ease;
+		-moz-transition: 1s ease;
+		-ms-transition: 1s ease;
+		transition: 1s ease;
+	}
+}
+
+.modalTitle {
+	color: black;
+	font-size: 32px;
+	weight: 500;
+	text-shadow:0px 1px #FEE; 
+}
+
+.pdfText {
+	padding: 10px 10px 20px 10px;
+}
+
+.addBold {
+	 font-weight: bold;
+	 //weight: 700;
+}
+
+.rdyScan {
+	padding-left: 280px;
+	margin-top: -66px;
+	font-weight: bold;
+	font-size: 24px;
+	text-shadow: .25px .25px #FFF;
+	vertical-align: middle;
+}
+

@@ -1,0 +1,43 @@
+{
+  "name": "lewisControls",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "productName": "LewisHelp",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "babel": "babel",
+    "build": "webpack",
+    "start": "electron .",
+    "build-mac": "electron-packager . --overwrite --platform=darwin --arch=x64 --icon=app/img/sawMac.icns --prune=true --out=mac-builds",
+    "build-win": "electron-packager . --overwrite --asar=true --platform=win32 --arch=x64 --icon=app/img/sawIcon.ico --prune=true --out=release-builds --overwrite --version-string.CompanyName=CE --version-string.FileDescription=CE --version-string.ProductName=\"Lewis Help\"",
+    "package": "electron-packager . --platform=win32 --arch=x64 --icon=app/img/sawIcon.ico --prune=true --out=release --overwrite"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-preset-electron": "^1.4.15",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "babel-register": "^6.26.0",
+    "css-loader": "^0.28.7",
+    "electron": "^1.7.5",
+    "electron-packager": "^9.1.0",
+    "electron-remote": "^1.2.0",
+    "node-sass": "^4.5.3",
+    "react": "^15.6.1",
+    "react-dom": "^15.6.1",
+    "react-modal": "^3.1.0",
+    "sass": "^1.0.0-beta.2",
+    "sass-loader": "^6.0.6",
+    "style-loader": "^0.18.2",
+    "webpack": "^3.6.0",
+    "react-modal": "3.10.10"
+  },
+  "dependencies": {
+    "react-router": "^4.2.0"
+  }
+}

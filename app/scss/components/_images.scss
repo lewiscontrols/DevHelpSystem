@@ -1,0 +1,80 @@
+$colorBackImg: '/public/../../../img/';
+
+.banner {
+	width:100%;
+	display: inline-block;
+	//margin: auto;
+	padding: 0;
+}
+
+.divImg {
+	width: 26%;
+	margin: 0px 0px 0px 20px;
+	padding: 1px;
+	background: #0080ff;
+	border: 2px solid #0080ff;
+	border-radius: 2px;
+	//height: 100%;
+	display: inline-block;
+	vertical-align: top;
+}
+
+.pdfImg {
+	width: 70%;
+	margin: 0px 0px 0px 0px;
+	padding: 1px;
+	background: #0080ff;
+	border: 2px solid #0080ff;
+	border-radius: 2px;
+	//height: 100%;
+	display: inline-block;
+	vertical-align: top;
+}
+
+.pdfHelpImg {
+	width: 45%;
+	height: auto;
+	margin-left: 160px;
+	border: 2px solid #0080ff;
+	border-radius: 2px;
+}
+
+.helpFileImg {
+	width: 100%;
+	height: auto;
+}
+
+.helpFileImgSmall {
+	width: 35%;
+	height: auto;
+}
+
+.subMenuImg {
+	width: 100%;
+	height: auto;
+	display: inline-block;
+	padding: 0;
+}
+
+
+.resizeLogo {
+	width: 14%;
+	height:auto;
+}
+
+.headerLogo {
+	width: 194px;
+	height: 80px;
+	padding-left: 40px;
+}
+
+.imgModal {
+	width: 50%;
+	padding: 2px;
+	background: #0080ff;
+	border: 1px solid #0080ff;
+	border-radius: 2px;
+	//height: 100%;
+	display: inline-block;
+	vertical-align: top;
+}

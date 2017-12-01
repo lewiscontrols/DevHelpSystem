@@ -1,0 +1,10 @@
+[
+	{
+		"menu" : "options",
+		"pdf" : "off",
+		"createhlp" : "off",
+		"deletehlp" : "off",
+		"edithlp" : "off",
+		"editpdf" : "off"
+ 	}
+]

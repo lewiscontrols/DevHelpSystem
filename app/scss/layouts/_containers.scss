@@ -1,0 +1,335 @@
+@-webkit-keyframes divFadeIn {
+    0%   { opacity: 0; }
+	50%  { opacity: .5; } 
+    100% { opacity: 1; } 
+}
+
+@keyframes divFadeIn {
+    0%   { opacity: 0; }
+	50%  { opacity: .5; } 
+    100% { opacity: 1; }
+}
+
+@-webkit-keyframes titleSlide {
+    0%   { right:0px; opacity: 1; text-shadow:200px 0px #FFF; color: black;}
+	15%   { right:10px; opacity: .7; text-shadow:200px 0px #FFF; color: black;}
+	30%   { right:30px; opacity: .4; text-shadow:200px 0px #FFF; color: black;}
+	55%   { right:60px; opacity: 0; text-shadow:200px 0px #FFE; color: white;}
+	60%   { right:120px; opacity: .4; text-shadow:200px 0px #FEE; color: white;}
+	75%   { right:170px; opacity: .7; text-shadow:200px 0px #EEE; color: white;}
+    100% { right:200px; opacity: 1; text-shadow:200px 0px #000; color: white;} 
+}
+
+
+@keyframes titleSlide {
+    0%   { right:0px; opacity: 1; text-shadow:200px 0px #FFF; color: black;}
+	15%   { right:10px; opacity: .7; text-shadow:200px 0px #FFF; color: black;}
+	30%   { right:30px; opacity: .4; text-shadow:200px 0px #FFF; color: black;}
+	55%   { right:60px; opacity: 0; text-shadow:200px 0px #FFE; color: white;}
+	60%   { right:120px; opacity: .4; text-shadow:200px 0px #FEE; color: white;}
+	75%   { right:170px; opacity: .7; text-shadow:200px 0px #EEE; color: white;}
+    100% { right:200px; opacity: 1; text-shadow:200px 0px #000; color: white;} 
+}
+
+@-webkit-keyframes bumpFirst {
+    0%   { top: 1; }
+	50%  { top: -2; } 
+    100% { top: 1; } 
+}
+
+@keyframes bumpFirst {
+    0%   { top: 1; }
+	50%  { top: -2; } 
+    100% { top: 1; }
+}
+
+
+@keyframes skewLeft {
+    0%   { transform: skewY(0deg); transform: skewX(0deg); }
+	40%  { transform: skewY(10deg); transform: skewX(7deg)} 
+	70%  { transform: skewY(10deg); transform: skewX(7deg)} 
+	100%  { transform: skewY(0deg); transform: skewX(0deg)} 
+}
+
+@keyframes skewRight {
+    0%   { transform: skewY(0deg); transform: skewX(0deg); }
+	40%  { transform: skewY(-10deg); transform: skewX(-7deg)} 
+	65%  { transform: skewY(-10deg); transform: skewX(-7deg)} 
+	100%  { transform: skewY(0deg); transform: skewX(0deg)} 
+}
+
+div {
+	font-family: Helvetica;
+}
+
+p {
+	font-family: Helvetica;
+}
+
+.slideIn {
+	@include titleStyle;
+    animation: skewLeft 1.5s forwards;
+	//transition: 2s ease;
+	animation-delay: 4s;
+    //animation: titleSlide .35s ease-in-out forwards;
+	//transition: 5.5s ease;
+	//animation-delay: 2.5s;
+	//animation-iteration-count:infinite;
+}
+
+.headerDiv {
+	//overflow: hidden;
+	padding-right: 20px;
+}
+
+.container {
+	height: 100%;
+	width: 100%;
+	background: white;
+	color: black;
+	display: inline-block;
+}
+
+.divContent {
+	width: 48%;
+	display: inline-block;
+}
+
+.headDiv {
+	width: 100%;
+	background: #0080ff;
+	height: 52px;
+}
+
+.menuDiv {
+	display: inline-block;
+	padding-bottom: 100px;
+}
+
+.mainContent {
+	width: 100%;
+	padding-left: 5%;
+}
+
+.menuButtons {
+	//margin-bottom: 10%;
+}
+
+.helpFileContainer {
+	width: 100%;
+	padding-left: 5%;
+}
+
+.mainMenuDiv {
+	height: 100%;
+	float: left;
+	display: inline-block;
+}
+
+.mainContainerDiv {
+	padding-left: 160px;
+	display: block;
+}
+
+.displayLineBreak {
+	white-space: pre-line;
+	display: inline-block;
+	width: 65%;
+	vertical-align: top
+}
+
+.printDiv {
+	display: inline-block;
+	vertical-align: top;
+	//width: 10%;
+}
+
+.vidContent {
+	white-space: pre-line;
+	display: inline-block;
+	padding: 0;
+	margin: 0;
+	float: right;
+	width: 25%;
+	//float: right;
+	vertical-align: top;
+	border: 2px solid #0080ff;
+}
+
+.fadingDiv {
+	text-align: justify;
+	padding: 0px 20px 0px 0px;
+	
+    -webkit-animation: divFadeIn .75s ease-in forwards;
+    animation: divFadeIn .75s ease-in forwards;
+}
+
+
+.addFade {
+    -webkit-animation: divFadeIn .75s ease-in forwards;
+    animation: divFadeIn .75s ease-in forwards;
+}
+
+
+::-webkit-scrollbar {     
+        background-color: #fff;
+        width: 2em
+}
+
+::-webkit-scrollbar-thumb:window-inactive,
+::-webkit-scrollbar-thumb {
+        background:  #0080ff
+}
+
+
+@media print {
+	
+	.fadingDiv {
+		padding: 0px!important;
+	}
+  
+  	.addPageBreak {
+  		page-break-before: always!important;
+  	}
+	
+	.addPageBreakAfter {
+		page-break-after: always!important;
+	}
+	
+	.artPDF {
+		page-break-before: always!important;
+		padding: 16px;
+	}
+	
+    .mainMenuDiv {
+	    display: none!important;
+	    visibility: hidden!important;
+    }
+	
+    .printBtn {
+      	display: none!important;
+      	visibility: hidden!important;
+    }
+	
+    .displayLineBreak {
+   	 	width: 100%!important;
+		overflow: visible;
+		padding: 16px 16px 32px 16px!important;
+		display: inline!important;
+    }
+
+    .divImg {
+  		float: none!important;
+  	 	width: 46%!important;
+  		margin-left: 174px!important;
+  		margin-bottom: 8px!important;
+		margin-top: 4px!important;
+    }
+  
+    .pdfHelpImg {
+		margin-left: 174px!important;
+		margin-bottom: 8px!important;
+		margin-top: 4px!important;
+    }
+	
+    .mainContainerDiv {
+  		float: none!important;
+	  	padding-left: 0px!important;
+	  	margin-bottom: 8px!important;
+		margin-top: 4px!important;
+	  	width: 100%!important;
+	  	display: inline!important;
+		overflow: visible;
+    }
+	
+	.rdyScan {
+		margin-top: -49.5158px!important;
+		text-decoration: underline!important;
+		font-size: 22px!important;
+	}
+	
+	.sectionDiv {
+		width:100%;
+		position: fixed;
+		bottom: 0;
+		//vertical-align: bottom;
+		padding-left: 300px;
+	}
+
+	.closeAllBtnHeader {
+		display: none!important;
+	}
+}
+
+
+
+
+/*********
+
+	h2 {
+	   page-break-after: avoid;
+	        page-break-inside: avoid;
+	}
+	
+	article {
+	   page-break-before: always;
+	       
+	}
+	
+  .mainMenuDiv {
+	float: none!important;
+    display: none!important;
+    visibility: hidden!important;
+	overflow:visible;
+	//width: 100%!important;
+  }
+  
+  .printBtn {
+    display: none!important;
+    visibility: hidden!important;
+	overflow:visible;
+  }
+  
+  .displayLineBreak {
+	float: none!important;
+  	width: 100%!important;
+	padding: 8px!important;
+	page-break-before: always!important;
+	overflow:visible;
+  }
+  
+  .mainContainerDiv {
+	float: none!important;
+	padding-left: 0px!important;
+	margin-bottom: 8px!important;
+	width: 100%!important;
+	display: block!important;
+	position: absolute!important;
+	overflow:visible;
+  }
+  
+  .divImg {
+	float: none!important;
+	width: 50%!important;
+	margin-left: 170px!important;
+	margin-bottom: 8px!important;
+	page-break-before:always!important;
+	overflow:visible;
+	     page-break-inside: avoid;
+  }
+  
+  .pdfHelpImg {
+	page-break-before:always!important;
+	overflow:visible;
+	     page-break-inside: avoid;
+  }
+  
+  .pdfPrint {
+	float: none!important;
+  	page-break-before:always!important;
+  }
+
+
+
+****///
+
