@@ -62,6 +62,7 @@ class MainRender extends Component {
                <p>Git hub version control test <br />
                I will be adding the new search system here - but for right now Im testing the version control I recently setup
                </p>
+               <p>testing this new CHANGE here</p>
                <p>
                   Lewis Controls system software is configured in a series of menus.  When the system is powered up the MAIN MENU will either appear on the touchscreen or can be called up by double clicking on the icon for the LCI Carriage Menu. <br /> <br />
                   The simplest way to access menu items is to use the touch screen.  Touch the button for the menu you want; enter values in the screen; touch Accept to save the values and touch Cancel to return to the menu.  You may also use the up and down arrow keys on the keyboard to highlight an individual menu item.  Pressing the (ENTER) key will pull up the submenu for the highlighted selection.   If a sub menu opens a dialog box, use text and numeric keys to modify entries.  Press the tab to move from entry to entry.  Press (ENTER) to save the values.  Press (ESC) to return to the menu.  You may also use the mouse to select menu items; simply place the mouse pointer over the button and press the left mouse button. <br /> <br />
