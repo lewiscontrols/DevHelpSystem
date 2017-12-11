@@ -56,7 +56,7 @@ class MainRender extends Component {
                   <input className="inputSearch" type="text" name="diaToFind" placeholder=":::SEARCH:::   Ex. 'Limits' " value={this.state.diaToFind} onChange={this.handleChange.bind(this)} />
          <br />
              {renderOutFile}
-             <h2>OVERVIEW</h2>
+             <h2>OVERVIEW  1.2</h2>
 
 
                <p>Git hub version control test <br />

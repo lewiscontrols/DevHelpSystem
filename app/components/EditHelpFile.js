@@ -38,7 +38,7 @@ class EditHelpFile extends Component {
    }
 
    handleSubmit(e) {
-         e.preventDefault();
+         //e.preventDefault();
          let dialogName = this.state.title;
          dialogName = dialogName.toLowerCase().replace(/\s+/g, '');
          // cap the first letter in the name and add the rest of the name 
@@ -141,6 +141,7 @@ class EditHelpFile extends Component {
                      <option value="StartUpOptions">Startup Options</option>
                      <option value="RunTimeOptions">Runtime Options</option>
                      <option value="ScannerSetup">Scanner Setup</option>
+                     <option value="LumberOptions">Lumber Options</option>
                      <option value="ShiftSetUp">Shift Setup</option>
                      <option value="ViewReportOptions">View Reports Options</option>
                      <option value="TroubleShootingOptions">Troubleshooting Options</option>

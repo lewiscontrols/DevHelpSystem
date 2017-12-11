@@ -161,21 +161,21 @@ class HelpFileContainer extends Component {
 				)
 		});
 
-
 	  	const renderMASS = this.state.massData.map( (obj, idx) => {
 	   		 	return (
 					<article className="artPDF">
 						<div className="headDiv">
 							<img className="headerLogo" src={`${logoImg}`}/> <p className="rdyScan"><i>READYSCAN 2 SYSTEM</i></p>
 						</div>
+							<div classname="sectionDiv">
+								<p>fixed</p>
+							</div>
 						<div key={idx}>
 							<div className="displayLineBreak">
 							{obj.type === 'section' ? (
 								<div>
 									<div dangerouslySetInnerHTML={getRawHTML(obj.content)}></div>
-									<div className="sectionDiv">
-										{obj.section}<br />
-									</div>
+								
 								</div>
 							) : (
 								<div>
@@ -185,14 +185,10 @@ class HelpFileContainer extends Component {
 									<div>
 										<img src={`${obj.image}`} className="pdfHelpImg"></img>
 									</div>
-									
-									<div className="sectionDiv">
-										{obj.section}<br />
-									</div>
 								</div>
 							)}
 							</div>
-						</div>
+						</div>			
 					</article>
 				)
 		});
@@ -489,7 +485,9 @@ export default HelpFileRender;
 
 
 /***
-
+	//<div className="sectionDiv">
+										{obj.section}<br />
+									//</div>
 
 	const Createpdfopt = () => {
 			return (

@@ -1,10 +1,10 @@
 [
 	{
 		"menu" : "options",
-		"pdf" : "off",
+		"pdf" : "on",
 		"createhlp" : "off",
 		"deletehlp" : "off",
-		"edithlp" : "off",
-		"editpdf" : "off"
+		"edithlp" : "on",
+		"editpdf" : "on"
  	}
 ]
