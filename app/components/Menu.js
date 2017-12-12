@@ -24,7 +24,8 @@ class Menu extends Component {
 			 toggleHLP: 'off',
 			 toggleDELETE: 'off',
 			 toggleEDIT: 'off',
-			 togglePDFEDIT: 'off'
+			 togglePDFEDIT: 'off',
+			 toggleKEYEDIT: 'off'
 		 }
 	   }
 
@@ -37,6 +38,7 @@ class Menu extends Component {
 		let tempThree = '';
 		let tempFour = '';
 		let tempFive = '';
+		let tempSix = '';
 
 		let getOptions = this.props.data.filter(obj => {
 		return pdfBtn === obj.menu;
@@ -46,6 +48,7 @@ class Menu extends Component {
 			tempThree = obj.deletehlp;
 			tempFour = obj.edithlp;
 			tempFive = obj.editpdf;
+		    tempSix = obj.editkeyword;
 			return (
 				<div key={idx}>
 				  {obj.pdf}
@@ -53,6 +56,7 @@ class Menu extends Component {
 				  {obj.deletehlp}
 				  {obj.edithlp}
 				  {obj.editpdf}
+				  {obj.editkeyword}
 				 </div>
 				);
 		});
@@ -62,7 +66,8 @@ class Menu extends Component {
 			toggleHLP: tempTwo,
 			toggleDELETE: tempThree,
 			toggleEDIT: tempFour,
-			togglePDFEDIT: tempFive
+			togglePDFEDIT: tempFive,
+			toggleKEYEDIT: tempSix
 		});
 	}
 
@@ -170,6 +175,12 @@ class Menu extends Component {
 					onClick={(e) => this.handleClick(e, 'Editpdffile')}
 		            className="createButton"
 		        >EDIT PDF</button>
+		        : '' }
+		         {this.state.toggleKEYEDIT === 'on' ? <button 
+		            label="Editkeyword"
+					onClick={(e) => this.handleClick(e, 'Editkeyword')}
+		            className="createButton"
+		        >EDIT KEYWORDS</button>
 		        : '' }
 		        <button 
 		            label="Main Menu"

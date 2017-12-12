@@ -5,6 +5,9 @@
 		"createhlp" : "off",
 		"deletehlp" : "off",
 		"edithlp" : "on",
-		"editpdf" : "on"
+		"editpdf" : "on",
+		"editkeyword" : "on"
  	}
 ]
+
+

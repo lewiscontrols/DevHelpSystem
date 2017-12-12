@@ -137,6 +137,26 @@
 	};
 }
 
+.aSectionButton {
+    height: 50px;
+    width: 500px;
+    font-size: 14px;
+    padding: 6px;
+	overflow: hidden;
+	background: white;
+	margin: 2px 2px 2px 18px;
+	border: 1px solid black;
+	vertical-align: text-bottom;
+	border-radius: 2px;
+	weight: 600;
+	display: block;
+	
+	&:hover {
+	    -webkit-animation: btnFade .35s ease-out forwards;
+	    animation: btnFade .35s ease-out forwards;
+	};
+}
+
 .aPrevButton {
 	color: white;
     height: 60px;

@@ -12,6 +12,7 @@ import PDFData from '../data/PDFData'
 import DeleteHelpFile from '../components/DeleteHelpFile'
 import EditHelpFile from '../components/EditHelpFile'
 import EditPDF from '../components/EditPDF'
+import KeyWords from '../components/KeyWords'
 import MainRender from '../components/MainRender'
 
 
@@ -431,6 +432,14 @@ class HelpFileContainer extends Component {
 				</div>
 			)
 		};
+
+		const Editkeyword = () => {
+			return (
+				<div className="fadingDiv">
+					<KeyWords />
+				</div>
+			)
+		};
 				 
 		return (
 			<div className="fadingDiv">
@@ -447,6 +456,7 @@ class HelpFileContainer extends Component {
 				{this.props.name === 'Deletehlpfile' ? <Deletehlpfile /> : ''}
 				{this.props.name === 'Edithlpfile' ? <Edithlpfile /> : ''}
 				{this.props.name === 'Editpdffile' ? <Editpdffile /> : ''}
+				{this.props.name === 'Editkeyword' ? <Editkeyword /> : ''}
 			</div>
 		)
 	}
