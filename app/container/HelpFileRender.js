@@ -12,6 +12,7 @@ import PDFData from '../data/PDFData'
 import DeleteHelpFile from '../components/DeleteHelpFile'
 import EditHelpFile from '../components/EditHelpFile'
 import EditPDF from '../components/EditPDF'
+import KeyWords from '../components/KeyWords'
 import MainRender from '../components/MainRender'
 
 
@@ -161,21 +162,21 @@ class HelpFileContainer extends Component {
 				)
 		});
 
-
 	  	const renderMASS = this.state.massData.map( (obj, idx) => {
 	   		 	return (
 					<article className="artPDF">
 						<div className="headDiv">
 							<img className="headerLogo" src={`${logoImg}`}/> <p className="rdyScan"><i>READYSCAN 2 SYSTEM</i></p>
 						</div>
+							<div classname="sectionDiv">
+								<p>fixed</p>
+							</div>
 						<div key={idx}>
 							<div className="displayLineBreak">
 							{obj.type === 'section' ? (
 								<div>
 									<div dangerouslySetInnerHTML={getRawHTML(obj.content)}></div>
-									<div className="sectionDiv">
-										{obj.section}<br />
-									</div>
+								
 								</div>
 							) : (
 								<div>
@@ -185,14 +186,10 @@ class HelpFileContainer extends Component {
 									<div>
 										<img src={`${obj.image}`} className="pdfHelpImg"></img>
 									</div>
-									
-									<div className="sectionDiv">
-										{obj.section}<br />
-									</div>
 								</div>
 							)}
 							</div>
-						</div>
+						</div>			
 					</article>
 				)
 		});
@@ -435,6 +432,14 @@ class HelpFileContainer extends Component {
 				</div>
 			)
 		};
+
+		const Editkeyword = () => {
+			return (
+				<div className="fadingDiv">
+					<KeyWords />
+				</div>
+			)
+		};
 				 
 		return (
 			<div className="fadingDiv">
@@ -451,6 +456,7 @@ class HelpFileContainer extends Component {
 				{this.props.name === 'Deletehlpfile' ? <Deletehlpfile /> : ''}
 				{this.props.name === 'Edithlpfile' ? <Edithlpfile /> : ''}
 				{this.props.name === 'Editpdffile' ? <Editpdffile /> : ''}
+				{this.props.name === 'Editkeyword' ? <Editkeyword /> : ''}
 			</div>
 		)
 	}
@@ -489,7 +495,9 @@ export default HelpFileRender;
 
 
 /***
-
+	//<div className="sectionDiv">
+										{obj.section}<br />
+									//</div>
 
 	const Createpdfopt = () => {
 			return (

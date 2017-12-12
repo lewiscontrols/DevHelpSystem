@@ -249,18 +249,20 @@ p {
 	}
 	
 	.sectionDiv {
-		width:100%;
-		position: fixed;
+		position: absolute;
 		bottom: 0;
-		//vertical-align: bottom;
-		padding-left: 300px;
+	}
+
+	.sectionFooter {
+		width: 100%;
+		vertical-align: bottom;
+		padding-left: 350px;
 	}
 
 	.closeAllBtnHeader {
 		display: none!important;
 	}
 }
-
 
 
 
